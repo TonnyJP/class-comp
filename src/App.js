@@ -1,10 +1,14 @@
-import Users from './components/Users';
+import UserFinder from './components/UserFinder';
+import { UserContextProvider } from './store.js/users-context';
 
 function App() {
   return (
-    <div>
-      <Users />
-    </div>
+    <UserContextProvider>
+      <div>
+        {/* <Users /> */}
+        <UserFinder />
+      </div>
+    </UserContextProvider>
   );
 }
 
